@@ -86,10 +86,10 @@ let choose=document.getElementById("choose").addEventListener("change",function(
 
 //pagination
 
-fetch(`http://localhost:3000/tickets?page=${page}&pageSize=${pageSize}`)
+fetch(`http://localhost:3000/tickets?page=${1}&pageSize=${4}`)
     .then(response => response.json())
     .then(data => {
-      console.log(`Page ${page}:`, data);
+      fetchTickets(tickets);
     })
     .catch(error => console.error('Error:', error));
 
